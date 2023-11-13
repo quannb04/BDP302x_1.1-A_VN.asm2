@@ -1,0 +1,8 @@
+Version 1:
+- hàm register có tham số _token khai báo uint8 (max 256): khi đăng ký học viên đang để giá trị 100 token (đề bài là 1000 token)
+- chỉnh sửa dòng 151: 
+	if (totalDeposit <= 0) thành
+	if (totalDeposit <= bidders[currentWinner].deposit)
+	Các tài khoản ko chiến thắng được rút tiền, thì totalDeposit vẫn luôn còn số lượng deposit của winner
+Version 2:
+- bổ sung modifier auctioneerPower (từ dòng 51 - 55) kiểm tra điều kiện auctioneer - người bán đấu giá: mới có thể thực hiện 
